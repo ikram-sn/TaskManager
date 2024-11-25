@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="520.0" style="-fx-background-color: #E5E1DA; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <Label prefHeight="85.0" prefWidth="198.0" text="Task Name" textAlignment="CENTER" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </Label>
+    </top>
+
+    <center>
+        <StackPane prefHeight="467.0" prefWidth="507.0">
+            <!-- Centered White Area -->
+            <VBox prefHeight="480.0" prefWidth="440.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 0);">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+                
+                <!-- Creation Date Section -->
+                <Label style="-fx-font-weight: bold;" text="Creation Date" />
+                <Label fx:id="lblCreationDate" style="-fx-background-color: #f8f9fa; -fx-padding: 5 10; -fx-background-radius: 10;" text="    " />
+
+                <!-- Due Date Section -->
+                <Label style="-fx-font-weight: bold;" text="Due Date" />
+                <Label fx:id="lblDueDate" style="-fx-background-color: #f8f9fa; -fx-padding: 5 10; -fx-background-radius: 10;" text="    " />
+
+                <!-- Description Section -->
+                <Label prefHeight="37.0" prefWidth="85.0" style="-fx-font-weight: bold;" text="Description" />
+                <TextArea fx:id="txtDescription" prefHeight="128.0" prefRowCount="4" prefWidth="400.0" promptText=" task description" wrapText="true" />
+
+                <!-- Status Section -->
+                <Label style="-fx-font-weight: bold;" text="Status" />
+                <Button fx:id="btnStatus" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-color: #35ACF1; -fx-background-radius: 1em;" text="In Progress" textFill="WHITE" />
+
+                <!-- Action Buttons -->
+                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                    <Button fx:id="btnDelete" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 5;" text="Delete" />
+                    <Button fx:id="btnModify" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 5;" text="Modify" />
+                </HBox>
+            </VBox>
+         <BorderPane.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" />
+         </BorderPane.margin>
+        </StackPane>
+    </center>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</BorderPane>
